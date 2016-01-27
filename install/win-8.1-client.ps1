@@ -834,7 +834,7 @@ process # {{{2
     else
     {
       Write-Verbose "Cloning Packer Windows repository"
-      & git clone https://github.com/gildas/packer-windows.git $PackerWindows
+      & git clone https://github.com/JamesSmart/packer-windows.git $PackerWindows
       if (! $?) { Throw "Packer Windows not cloned. Error: $LASTEXITCODE" }
     }
 
@@ -1428,7 +1428,7 @@ process # {{{2
     Install-PackerPlugin -Name 'Hyper-V' -Url "${GitHubRoot}/${CURRENT_VERSION}/config/windows/hyper-v/packer-builder-hyperv-0.2.0-win.7z"
   }
 
-  Install-PackerPlugin -Name 'Provisioner Wait' -Url https://github.com/gildas/packer-provisioner-wait/releases/download/v0.1.0/packer-provisioner-wait-0.1.0-win.7z
+  Install-PackerPlugin -Name 'Provisioner Wait' -Url https://github.com/JamesSmart/packer-provisioner-wait/releases/download/v0.1.0/packer-provisioner-wait-0.1.0-win.7z
 
   Install-Package puppet
   Install-Package imdisk
